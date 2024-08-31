@@ -68,7 +68,7 @@
         &kp TAB   &kp EXCL     &kp AT    &kp LBRC    &kp RBRC      &kp T  &none                                                                &none &kp CARET  &kp N7  &kp N8    &kp N9     &kp iMINUS    &kp BSLH
         &kp LGUI   &kp AMPS     &kp DOLLAR    &kp LPAR    &kp RPAR      &kp G  &none            &kp LCTRL  &kp LALT &kp LGUI  &kp RCTRL             &none &kp ASTERISK  &kp N4  &kp N5    &kp N6     &kp KP_PLUS     &kp SQT
         &kp LSHFT &kp HASH     &kp CARET    &kp LBKT    &kp RBKT      &kp B                              &kp HOME &kp PG_UP                             &kp N  &kp N1  &kp N2    &kp N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp SPACE &kp BSPC   &kp END  &kp PG_DN &kp ENTER &kp KP_N0                &kp N0  &none      &kp     &kp RBKT        &mo 2
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp SPACE &kp BSPC   &kp END  &kp PG_DN &kp ENTER &kp KP_N0                &kp N0  &none      &none     &kp RBKT        &mo 2
       >;
     };
     fn {
