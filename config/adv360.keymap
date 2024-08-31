@@ -6,14 +6,14 @@
 #include <dt-bindings/zmk/mouse.h>
 
 
-#define HYP(key) LS(LC(LA(LG(key))))
+#define HYP LS(LC(LA(LGUI)))
 #define HYPER    LS(LC(LA(LGUI)))
 
 #define MACLOCK  LG(LC(Q))
 
-#define BROWSER_SEARCH LG(F) 
-#define BROWSER_NEWTAB LG(T) 
-#define BROWSER_CLOSETTAB LG(W) 
+#define BROWSER_SEARCH LG(F)
+#define BROWSER_NEWTAB LG(T)
+#define BROWSER_CLOSETTAB LG(W)
 #define BROWSER_NEXTTAB LG(LA(RIGHT))
 #define BROWSER_PREVTAB LG(LA(LEFT))
 
