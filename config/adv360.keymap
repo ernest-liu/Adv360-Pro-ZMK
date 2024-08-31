@@ -66,7 +66,7 @@
       bindings = <
         &kp ESC   &kp N1       &kp N2      &kp N3      &kp N4        &kp N5 &trans                                                               &mo 3 &kp N6     &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp EXCL     &kp AT      &kp LBRC    &kp RBRC      &kp T  &none                                                                &none &kp CARET  &kp N7     &kp N8       &kp N9        &kp KP_MINUS    &kp BSLH
-        &kp LGUI  &kp HASH     &kp DOLLAR  &kp LPAR    &kp RPAR      &kp G  &none         &kp LCTRL   &kp LALT &kp LGUI  &kp RCTRL               &none &kp SRAR`````````````````````````````````   &kp N4     &kp N5       &kp N6        &kp KP_PLUS     &kp SQT
+        &kp LGUI  &kp HASH     &kp DOLLAR  &kp LPAR    &kp RPAR      &kp G  &none         &kp LCTRL   &kp LALT &kp LGUI  &kp RCTRL               &none &kp STAR   &kp N4     &kp N5       &kp N6        &kp KP_PLUS     &kp SQT
         &kp LSHFT &kp PERCENT  &kp AMPS    &kp LBKT    &kp RBKT      &kp B                            &kp HOME &kp PG_UP                               &kp N      &kp N1     &kp N2       &kp N3        &kp KP_ENTER    &kp RSHFT
         &mo 2     &kp GRAVE    &kp CAPS    &kp LEFT    &kp RIGHT                &kp SPACE &kp DELETE  &kp END  &kp PG_DN &kp ENTER &kp KP_N0                      &kp N0     &none        &none         &kp RBKT        &mo 2
       >;
