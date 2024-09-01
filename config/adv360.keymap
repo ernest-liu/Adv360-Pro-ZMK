@@ -73,7 +73,7 @@
 &kp TAB    &kp Q    &kp W     &lt 5 E   &kp R      &kp T   &none                                                                               &none           &kp Y   &kp U    &kp I      &kp O     &kp P      &kp BSLH
 &kp LGUI   &kp A    &kp S     &lt 4 D   &lt 1 F    &kp G   &none           &mt LCTRL ENTER   &kp HOME       &kp PG_UP     &mt RCTRL ESC        &kp MACLOCK     &kp H   &lt 1 J  &kp K      &kp L     &kp SEMI   &mt RCTRL SQT
 &kp LSHFT  &kp Z    &kp X     &kp C     &kp V      &kp B                                     &kp END        &kp PG_DN                                          &kp N   &kp M    &kp COMMA  &kp DOT   &kp FSLH   &mt RSHFT BACKSPACE
-&kp LCTRL  &kp ESC  &kp LALT  &kp LEFT  &kp RIGHT          &mt LGUI SPACE  &mt LSHFT ESCAPE  &lt 1 TAB      &mt RALT TAB  &mt RSHFT BACKSPACE  &mt RGUI ENTER          &kp UP   &kp DOWN   &kp LBKT  &kp RBKT   &mo 2
+&kp LCTRL  &kp ESC  &kp LALT  &kp LEFT  &kp RIGHT          &mt LGUI SPACE  &mt LSHFT ESCAPE  &lt LALT TAB      &mt RALT TAB  &mt RSHFT BACKSPACE  &mt RGUI ENTER          &kp UP   &kp DOWN   &kp LBKT  &kp RBKT   &mo 2
             >;
         };
 
@@ -110,9 +110,9 @@
         layer_4 {
             bindings = <
 &trans  &trans  &trans     &trans  &trans  &trans  &trans                                      &trans  &trans  &trans              &trans              &trans               &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans  &trans                                      &trans  &trans  &trans              &trans              &trans               &trans  &trans
-&trans  &trans  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans              &kp LA(UP_ARROW)    &trans               &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans                  &trans      &trans                  &trans  &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans  &trans                                      &trans  &trans  &trans              &kp UP_ARROW               &trans               &trans  &trans
+&trans  &trans  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LA(LEFT_ARROW)              &kp DOWN_ARROW   &kp LA(RIGHT_ARROW)               &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans              &trans              &trans               &trans  &trans
             >;
         };
@@ -120,9 +120,9 @@
         layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans          &kp UP_ARROW          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LEFT_ARROW          &kp DOWN_ARROW    &kp RIGHT_ARROW           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans          &trans          &trans           &trans  &trans
             >;
         };
