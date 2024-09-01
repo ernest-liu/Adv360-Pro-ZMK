@@ -13,61 +13,6 @@
 #define BROWSER_NEXTTAB LG(LA(RIGHT))
 #define BROWSER_PREVTAB LG(LA(LEFT))
 
-{
-
-macros {
-    // 0 params macro
-
-    my_macro: my_macro {
-        // ...
-
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>; // Must be 0
-        bindings = <>;
-    };
-
-    // 1 param macro
-
-    my_one_param_macro: my_one_param_macro {
-        // ...
-
-        compatible = "zmk,behavior-macro-one-param";
-        #binding-cells = <1>; // Must be 1
-        bindings = <>;
-    };
-
-    // 2 params macro
-
-    my_two_param_macro: my_two_param_macro {
-        // ...
-
-        compatible = "zmk,behavior-macro-two-param";
-        #binding-cells = <2>; // Must be 2
-        bindings = <>;
-    };
-
-    lm: lm {
-        compatible = "zmk,behavior-macro-two-param";
-        wait-ms = <0>;
-        tap-ms = <0>;
-        #binding-cells = <2>;
-        bindings =
-            <&macro_param_1to1>,
-            <&macro_press>,
-            <&mo MACRO_PLACEHOLDER &macro_param_2to1>,
-            <&macro_press>,
-            <&kp MACRO_PLACEHOLDER>,
-            <&macro_pause_for_release>,
-            <&macro_param_2to1>,
-            <&macro_release>,
-            <&kp MACRO_PLACEHOLDER &macro_param_1to1>,
-            <&macro_release>,
-            <&mo MACRO_PLACEHOLDER>;
-    };
-};
-
-};
-
 &mt {
     tapping-term-ms = <210>;
     quick_tap_ms = <200>;
@@ -90,6 +35,25 @@ macros {
         };
 
         #endif
+
+        lm: lm {
+            compatible = "zmk,behavior-macro-two-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER &macro_param_2to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_2to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_release>,
+                <&mo MACRO_PLACEHOLDER>;
+        };
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -124,11 +88,11 @@ macros {
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp N1   &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                                                       &mo 3        &kp N6  &kp N7   &kp N8     &kp N9    &kp MINUS  &kp EQUAL
-&kp TAB    &kp Q    &kp W     &lt 5 E   &kp R      &kp T   &none                                                                                                        &none        &kp Y   &kp U    &kp I      &kp O     &kp P      &kp BSLH
-&kp LGUI   &kp A    &kp S     &lt 4 D   &lt 1 F    &kp G   &none                   &lm 6 LEFT_CONTROL  &kp HOME      &kp PG_UP     &mt RCTRL ESC                        &kp MACLOCK  &kp H   &lt 1 J  &kp K      &kp L     &kp SEMI   &mt RCTRL SQT
-&kp LSHFT  &kp Z    &kp X     &kp C     &kp V      &kp B                                               &kp END       &kp PG_DN                                                       &kp N   &kp M    &kp COMMA  &kp DOT   &kp FSLH   &mt RSHFT BACKSPACE
-&kp LCTRL  &kp ESC  &kp LALT  &kp LEFT  &kp RIGHT                  &mt LGUI SPACE  &mt LSHFT ESCAPE    &lm 6 LGUI    &mt RALT TAB  &mt RSHFT BACKSPACE  &mt RGUI ENTER                       &kp UP   &kp DOWN   &kp LBKT  &kp RBKT   &mo 2
+&kp GRAVE  &kp N1   &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                                                   &mo 3  &kp N6  &kp N7   &kp N8     &kp N9    &kp MINUS  &kp EQUAL
+&kp TAB    &kp Q    &kp W     &lt 5 E   &kp R      &kp T   &none                                                                                                    &none  &kp Y   &kp U    &kp I      &kp O     &kp P      &kp BSLH
+&kp LGUI   &kp A    &kp S     &lt 4 D   &lt 1 F    &kp G   &none                   &lm 7 LCTRL       &kp HOME      &kp PG_UP   &mt RCTRL ESC                        &none  &kp H   &lt 1 J  &kp K      &kp L     &kp SEMI   &mt RCTRL SQT
+&kp LSHFT  &kp Z    &kp X     &kp C     &kp V      &kp B                                             &kp END       &kp PG_DN                                               &kp N   &kp M    &kp COMMA  &kp DOT   &kp FSLH   &mt RSHFT BACKSPACE
+&kp LCTRL  &kp ESC  &kp LALT  &kp LEFT  &kp RIGHT                  &mt LGUI SPACE  &mt LSHFT ESCAPE  &lm 7 LGUI    &lm 7 LALT  &mt RSHFT BACKSPACE  &mt RGUI ENTER                 &kp UP   &kp DOWN   &kp LBKT  &kp RBKT   &mo 2
             >;
         };
 
@@ -184,11 +148,21 @@ macros {
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans               &none    &kp TAB        &kp HOME  &trans          &trans  &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                &kp LS(TAB)    &kp END                           &kp LG(LS(N))  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &kp LS(TAB)  &kp TAB  &none          &trans    &trans  &trans                         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                            &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                            &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans               &trans   &trans    &kp HOME  &trans          &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &trans    &kp END                           &kp LG(LS(N))  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                  &kp LS(TAB)  &kp TAB  &trans    &trans    &trans  &trans                         &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&kp GRAVE  &kp N1   &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                                      &mo 3        &kp N6  &kp N7  &kp N8     &kp N9    &kp MINUS  &kp EQUAL
+&kp TAB    &kp Q    &kp W     &kp E     &kp R      &kp T   &none                                                                                       &none        &kp Y   &kp U   &kp I      &kp O     &kp P      &kp BSLH
+&kp LGUI   &kp A    &kp S     &kp D     &kp F      &kp G   &none                &trans   &kp TAB        &kp HOME  &mt RCTRL ESC                        &kp MACLOCK  &kp H   &kp J   &kp K      &kp L     &kp SEMI   &mt RCTRL SQT
+&kp LSHFT  &kp Z    &kp X     &kp C     &kp V      &kp B                                 &kp LS(TAB)    &kp END                                                     &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH   &mt RSHFT BACKSPACE
+&kp LCTRL  &kp ESC  &kp LALT  &kp LEFT  &kp RIGHT                  &kp LS(TAB)  &kp TAB  &trans         &trans    &mt RSHFT BACKSPACE  &mt RGUI ENTER                       &kp UP  &kp DOWN   &kp LBKT  &kp RBKT   &mo 2
             >;
         };
     };
