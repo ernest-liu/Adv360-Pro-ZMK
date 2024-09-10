@@ -81,22 +81,22 @@
 
         ctrl_home {
             bindings = <&kp HOME>;
-            key-positions = <60 13>;
+            key-positions = <>;
         };
 
         ctrl_end {
             bindings = <&kp END>;
-            key-positions = <60 27>;
+            key-positions = <>;
         };
 
         ctrl_pageup {
             bindings = <&kp PAGE_UP>;
-            key-positions = <60 45>;
+            key-positions = <>;
         };
 
         ctrl_pagedown {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <60 59>;
+            key-positions = <>;
         };
     };
 
